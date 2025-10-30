@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "buildCommand": "cd fhe_election_app && npm run export",
+  "installCommand": "cd fhe_election_app && npm ci || npm i",
+  "framework": "nextjs",
+  "env": {
+  }
+}
