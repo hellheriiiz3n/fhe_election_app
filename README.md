@@ -1,34 +1,4 @@
-## fhe_election_app
-
-Простое приложение для анонимных выборов на основе FHE (Fully Homomorphic Encryption): фронтенд (Next.js) + смарт‑контракты (Hardhat).
-
-### Быстрый старт
-- Требования: Node.js 20+
-- Установите зависимости:
-- Frontend: `cd frontend && npm i`
-- Contracts: `cd fhe_election_app_contracts && npm i`
-
-### Разработка
-1) Запуск локальной сети/компиляция
-```
-cd fhe_election_app_contracts
-npm run compile
-```
-
-2) Экспорт данных для фронтенда (адреса/ABI)
-```
-npm run export:frontend
-```
-
-3) Запуск фронтенда
-```
-cd ../fhe_election_app
-npm run dev
-```
-
-—
-
-Simple FHE-based anonymous elections app: Next.js frontend + Hardhat smart contracts.
+Simple FHE-based anonymous elections app
 
 ### Quick start
 - Requirements: Node.js 20+
@@ -67,4 +37,51 @@ npm run dev
   - build: `cd fhe_election_app && npm run build`
 - Optionally set Vercel Root Directory to `fhe_election_app`.
 
+переведи на китайский
 
+## fhe_election_app
+简单的基于 FHE（全同态加密）的匿名投票应用：Next.js 前端 + Hardhat 智能合约。
+
+⸻
+
+快速开始
+	•	要求：Node.js 20 及以上
+	•	安装依赖：
+	•	前端：cd frontend && npm i
+	•	合约：cd fhe_election_app_contracts && npm i
+
+⸻
+
+开发
+	1.	启动本地区块链网络 / 编译合约
+
+cd fhe_election_app_contracts
+npm run compile
+
+	2.	将部署数据（地址/ABI）导出到前端
+
+npm run export:frontend
+
+	3.	启动前端
+
+cd ../fhe_election_app
+npm run dev
+
+
+⸻
+
+部署到 Vercel
+	•	Monorepo 结构： Next.js 应用位于 fhe_election_app/，智能合约位于 contracts/。
+	•	Vercel 使用根目录下的 vercel.json：
+	•	安装依赖：cd fhe_election_app && npm ci
+	•	构建命令：cd fhe_election_app && npm run build
+	•	在 Vercel 项目设置中，可以将 Root Directory 设置为 fhe_election_app（可选，因为 vercel.json 已定义）。
+
+⸻
+
+简单说明：
+Next.js 应用位于 fhe_election_app/，智能合约在 contracts/。
+Vercel 会读取根目录的 vercel.json 文件并执行：
+	•	安装依赖：cd fhe_election_app && npm ci
+	•	构建：cd fhe_election_app && npm run build
+也可以在 Vercel 设置中将根目录指定为 fhe_election_app。
